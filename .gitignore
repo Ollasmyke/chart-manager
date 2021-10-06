@@ -1,9 +1,40 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+package-lock.json
+yarn-lock.json
+yarn.lock
+yarn.*
+
+# IDEs and editors
+/.idea
+.idea
+.idea/*
+.vscode/*
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.history/*
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
 # testing
 /coverage
@@ -17,7 +48,14 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+/typings
+npm-debug.log
 npm-debug.log*
+yarn-error.log
 yarn-debug.log*
 yarn-error.log*
+testem.log
+Thumbs.db

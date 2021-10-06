@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created by UPL team, on 6th October, 2021.
+Version 0.0.1
 
 ## Available Scripts
 
