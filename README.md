@@ -2,7 +2,7 @@ This project was created by UPL team, on 6th October, 2021.
 Version 0.0.1
 
 ## Installing a React application
-- Install Node from nodejs.org, if MacOS, use brew.sh
+- Install Node from [nodejs.org](https://nodejs.org/en/), if MacOS, use [brew.sh](https://docs.brew.sh/FAQ)
 - When you install Node, NPM comes with it.
 - You can choose an alternative for NPM, which is Yarn.
     - Install Yarn using npm `npm i -g yarn`
