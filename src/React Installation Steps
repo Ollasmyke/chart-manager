@@ -1,0 +1,25 @@
+
+
+In other to use React.
+
+
+- Install Node. nodejs.org
+- When you install Node, NPM comes with it.
+- You can choose an altenative for NPM, which is Yarn.
+    - Install Yarn, npm i -g yarn
+
+- Install React app, npx create-react-app name-of-the-app
+    - npx also comes with Node (versions npm 5+ which is also Node 8+)
+    - npx, whixh is Node Package Execute, helps to exceute CLIs and libraries from node, without installing it.
+
+- Git comes with the created app, and the app libraries are installed with yarn
+- Set up your gitignore, and edit your readme.
+- To add more libraries, If Yarn
+    - yarn add name-of-the-library
+- if NPM
+    - npm i --save name-of-the-library
+
+- Set up your router on the app.js with React Router DOM
+    - Install: yarn add react-router-dom
+
+- 
