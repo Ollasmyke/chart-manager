@@ -1,13 +1,18 @@
 import {useState} from "react";
+import {useHistory} from "react-router-dom";
 
 const Login = () => {
 
+  const history = useHistory();
   const [username, updateUsername] = useState("");
   const [password, updatePassword] = useState("");
 
   const login = () => {
-    console.log("username = ", username);
-    console.log("password = ", password);
+    if (username !== "admin@admin.com" || password !== "password123") alert("Username or Password is invalid");
+    else {
+      localStorage.setItem("username", username);
+      history.push("/");
+    }
   }
 
   return (
@@ -23,13 +28,13 @@ const Login = () => {
           <div className="login-form">
             <form>
               <div className="form-group mb-3">
-                <label>User Name</label>
-                <input type="text" className="form-control" placeholder="User Name" value={username}
+                <label>Username or Email</label>
+                <input type="text" className="form-control" placeholder="Enter Username or Email" value={username}
                        onChange={event => updateUsername(event.target.value)}/>
               </div>
               <div className="form-group mb-5">
                 <label>Password</label>
-                <input type="password" className="form-control" placeholder="Password" value={password}
+                <input type="password" className="form-control" placeholder="Enter Password" value={password}
                        onChange={event => updatePassword(event.target.value)}/>
               </div>
               <button onClick={login} type="button" className="btn btn-black">Login</button>

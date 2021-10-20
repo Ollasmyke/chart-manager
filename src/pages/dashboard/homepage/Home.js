@@ -1,10 +1,13 @@
 import Header from "../../../components/Header";
 
 const Home = () => {
+
+  const username = localStorage.getItem("username");
+
   return (
     <>
       <Header/>
-      <h1>Home Page</h1>
+      <h1>Hello, {username}</h1>
     </>
 
   );

@@ -22,4 +22,9 @@ In other to use React.
 - Set up your router on the app.js with React Router DOM
     - Install: yarn add react-router-dom
 
-- 
+- Javascript Event
+- React Hooks
+    - React useState, a type of React Hook.
+
+- Browser Cache (10MB for Chrome, 5MB for Firefox and 3MB for Opera) and Cookie (4KB) storage;
+    Tiny piece of memory storage for the browser

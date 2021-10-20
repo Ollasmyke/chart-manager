@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 
 import './App.css';
 import Home from './pages/dashboard/homepage/Home';
@@ -8,13 +8,20 @@ import Login from "./pages/auth/login/Login";
 
 const App = () => {
 
+  const username = localStorage.getItem("username");
+  const IsLoggedInRoute = ({component: Component, ...rest}) => (
+    <Route {...rest} render={props => (
+      username ? <Component {...props} /> : <Redirect to="/login"/>
+    )}/>
+  );
+
   return (
     <Router>
       <Switch>
         <Route exact path="/login" component={Login}/>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/support" component={Support}/>
+        <IsLoggedInRoute exact path="/" component={Home}/>
+        <IsLoggedInRoute exact path="/about" component={About}/>
+        <IsLoggedInRoute exact path="/support" component={Support}/>
       </Switch>
     </Router>
   );
